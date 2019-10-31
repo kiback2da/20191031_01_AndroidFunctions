@@ -11,16 +11,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var receivedName = intent.getStringExtra("user")
+        var receivedName = intent.getStringExtra("name")
         var receivedNumber = intent.getStringExtra("number")
+        var receivedId = intent.getStringExtra("id")
 
         Log.d("로그",receivedName)
         Log.d("로그",receivedNumber)
 
         /*
-        mainName.text = intent.getStringExtra("user")
+        mainName.text = intent.getStringExtra("name")
         mainNum.text = intent.getStringExtra("number")+"번 회원" */
-        mainName.text = receivedName
+        mainName.text = "${receivedName}(${receivedId})"
         mainNum.text = "${receivedNumber} 번 회원"
     }
 }
